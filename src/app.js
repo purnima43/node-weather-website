@@ -5,6 +5,7 @@ const request=require('request')
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
 const app=express()
+const port=process.env.PORT||3000
 //define paths for express config
 const path_to_use=path.join(__dirname,'../public')
 const views_path=path.join(__dirname,'../templates/views')
@@ -120,7 +121,7 @@ app.get('*',(req,res)=>
 })
 
 */
-app.listen(3000,()=>
+app.listen(port,()=>
     {
-     console.log('sever is up on port 3000')
+     console.log('sever is up on port'+port)
     })
