@@ -20,7 +20,7 @@ const forecast=(longitude,latitude,callback)=>
        }
        else
       {   var cur=body.current
-          callback(undefined,cur.weather_descriptions[0]+",it is "+cur.temperature +" degree Celcius and it feels like "+cur.feelslike+" degree celcius out")
+          callback(undefined,cur.weather_descriptions[0]+",it is "+cur.temperature +" degree Celcius and it feels like "+cur.feelslike+" degree celcius out"+ " and the humidity is "+cur.humidity)
          
       }
       })
